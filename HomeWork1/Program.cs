@@ -31,3 +31,15 @@ if(num3 > max) max = num3;
 Console.Write("max = ");
 Console.WriteLine(max);
 */
+/*int num;
+Console.Write ("Input integer number: ");
+num = Convert.ToInt32(Console.ReadLine());
+ if(num % 2 == 0) 
+ {
+	 Console.WriteLine ("Yes");
+ }
+else
+{
+	Console.WriteLine ("No");
+}
+*/
