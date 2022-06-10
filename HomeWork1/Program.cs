@@ -43,3 +43,9 @@ else
 	Console.WriteLine ("No");
 }
 */
+int N;
+Console.Write ("Input integer number: ");
+N = Convert.ToInt32(Console.ReadLine());
+for (int num1 = 2; num1 < N; num1 ++)       
+if (num1%2==0)            
+Console.Write(num1+" ");
