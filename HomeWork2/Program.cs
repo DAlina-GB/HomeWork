@@ -19,7 +19,7 @@ Console.WriteLine ($"Remainder of the number is {result}");
 
 // Задача №2
 // Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
-int IsolateThree(int num)
+/*int IsolateThree(int num)
 {
 if(num >= 100 && num <= 999)
 {
@@ -45,3 +45,25 @@ else
 {
     Console.WriteLine ($"Remainder of the number is {result}");
 }
+*/
+//Задача № 3
+//Напишите программу, 
+//которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
+void dayWeek (int num) 
+{
+  if (num == 6 || num== 7) 
+  {
+  Console.WriteLine("Yes,Weekend");
+  }
+  else if (num < 1 || num > 7) 
+  {
+    Console.WriteLine("Error");
+  }
+  else Console.WriteLine("No,it's a weekday");
+}
+
+Console.Write("Input the number of the day of the week: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+dayWeek (num);
