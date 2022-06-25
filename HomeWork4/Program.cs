@@ -25,27 +25,26 @@ int Exponentiation(int num1, int num2)
 //Задача №2
 //Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 //1, 2, 5, 7, 19, 3, 44, 3 -> [1, 2, 5, 7, 19, 3, 44, 3
-/*
-int[] num = new int[8];
+
+Console.WriteLine("Input the length of the array: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[num];
 
 void RandomArray (int[] array)
 {                                       
-for (int i = 0; i < array.Length; i = i + 1) 
+for (int i = 0; i < num; i = i + 1) 
 {                                             
     array[i] = new Random().Next(0,99);          
 } 
 }   
-
 void WriteArray(int[] array)
 {
-for (int i = 0; i < array.Length; i++)
+for (int i = 0; i < num; i++)
 {                                                    
     Console.Write (array[i]+" ");
 } 
  Console.WriteLine();
 }
-
-RandomArray (num);
-WriteArray (num);
 Console.WriteLine();
-*/
+RandomArray (array);
+WriteArray (array);
