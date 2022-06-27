@@ -4,8 +4,8 @@ int[] ReverseArray(int[] array)
 {
     int temp;
     int j = array.Length - 1, i = 0;
-    //вариант №1 с циклом while
-    while (i < j)
+
+    while (i < j)            //вариант №1 с циклом while
     {
         temp = array[i];
         array[i] = array[j];
@@ -14,8 +14,8 @@ int[] ReverseArray(int[] array)
         i++;
         j--;
     }
-    /*  //вариант №1 с циклом for
-    for(int i=0;i< array.Length/2;i++, j--)
+    /*  
+    for(int i=0;i< array.Length/2;i++, j--)             //вариант №2 с циклом for
     {
         temp = array[i];
         array[i]=array[j];
@@ -24,8 +24,7 @@ int[] ReverseArray(int[] array)
     
     return array;
 }
-//Вызов метода
-int[] myArray = { 2, 4, 6, 8,10};
+int[] myArray = { 2, 4, 6, 8,10};           //Вызов метода
 myArray = ReverseArray(myArray);
 for (int i = 0; i < myArray.Length; i++)
 {
@@ -48,7 +47,7 @@ Triangle(a,b,c);
  */
 //Не используя рекурсию, выведите первые N чисел Фибоначчи. 
 //Первые два числа Фибоначчи: 0 и 1.
-
+/*
 void Fibonacci(int n)
 {
     int[] array = new int[n];
@@ -63,7 +62,7 @@ void Fibonacci(int n)
 }
 int n = 7;
 Fibonacci(n);
-
+*/
 //Напишите программу, которая переводит десятичное число в двоичное.
 /*
 string BinaryNumber(int num)
