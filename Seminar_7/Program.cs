@@ -1,5 +1,5 @@
 ﻿//Сгенерировать двух мерный массив и заполнить егослучайными числами в заданном диапазоне.
-int[,] CreateRandomTwoDemArray(int a, int b, int min, int max)
+int[,] CreateRandomTwoDimArray(int a, int b, int min, int max)
 {
     int[,] newMatrix = new int[a, b];
     for (int i = 0; i < a; i++)
@@ -25,7 +25,7 @@ int[,] CreateRandomTwoDemArray(int a, int b, int min, int max)
 
     return newMatrix;
 }
-void ShowTwoDemArray(int[,] array);                      //метод для коментирования массива
+void ShowTwoDimArray(int[,] array);                      //метод для вывода масива на экран 
 for (int i = 0; i < array.GetLength(0); i++)
 {
     for (int j = 0; j < array.GetLength(1); j++)
