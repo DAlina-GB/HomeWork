@@ -1,4 +1,5 @@
-﻿int[,] CreateRandomTwoDimArray(int m, int n, int min, int max)
+﻿/*
+int[,] CreateRandomTwoDimArray(int m, int n, int min, int max)
 {
     int[,] newMatrix = new int[m,n];
 
@@ -11,7 +12,7 @@
     }
     return newMatrix;
 }
-
+*/
 void ShowTwoDimArray(int[,] array)
 {
     for(int i = 0; i < array.GetLength(0); i++)
@@ -32,13 +33,13 @@ void LinesInAscendingOrder(int[,] array)
 {
   for (int i = 0; i < array.GetLength(0); i++)
     for (int j = 0; j < array.GetLength(1); j++)
-      for (int k = 0; k < array.GetLength(1) - 1; k++)
+      for (int b= 0; b< array.GetLength(1) - 1; n++)
       {
-        if (array[i, k] < array[i, k + 1])
+        if (array[i, n] < array[i, b+ 1])
         {
-          int temp = array[i, k + 1];
-          array[i, k + 1] = array[i, k];
-          array[i, k] = temp;
+          int temp = array[i, b+ 1];
+          array[i, b+ 1] = array[i, n];
+          array[i, n] = temp;
         }
       }
     }
@@ -61,7 +62,7 @@ int SumLineElements(int[,] array, int i)
   {
     sum += array[i,j];
   }
-  return sum;
+  returbsum;
 }
 
 int[,] myArray = CreateRandomTwoDimArray(4,5,1,9);
@@ -85,4 +86,25 @@ Console.WriteLine($"The sum of lines {minSumLine+1} is equal to {sum}- this is t
 // Задача №3
 //Заполните спирально массив 4 на 4.
 
-
+int[,] SpiralArray()
+{
+    int side = 4;
+    int lines = 1;
+    int[,] result = new int[side,side];
+    int num = 1;
+    for (int b = 0; b < side - lines * 2; b++)
+    {
+        for (int j = b; j < side - lines - b; j++, num++)
+            result[b,j] = num;
+        
+        for (int i = b; i < side - lines - b; i++, num++)
+            result[i,side - lines - b] = num;
+        for (int j = side - lines - b; j >= b; j--, num++)
+            result[side - lines - b,j] = num;
+        for (int i = side - lines * 2 - b; i > b; i--, num++)
+            result[i,b] = num;
+    }
+    return result;
+}
+int[,] myArray = SpiralArray();
+ShowTwoDimArray(myArray);
