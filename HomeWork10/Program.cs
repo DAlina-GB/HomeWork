@@ -1,20 +1,37 @@
 ﻿//Задача №1
 //Задайте массив строк. Напишите программу, считает кол-во слов в массиве, начинающихся на гласную букву.
 //Пример: { "qwe", "wer", "ert", "rty", "tyu"} -> 1
-/*
-int QuantitiWordStartingVowel(string [] array)
+string[] CreateStringArray(int size)
 {
-    int counter = 0;
-    char [] volwe = {'a', 'e', 'i', 'o', 'u', 'y'};
+    string[] words = new string[size];
 
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < size; i++)
     {
-        for (int j = 0; j < volwe.Length; j++)
-            if (Char.ToLower(array[i][0]) == volwe[j]) counter++;
-    } 
-    return counter;
+        Console.Write($"Input {i + 1} word: ");
+        words[i] = Console.ReadLine();
+    }
+
+    return words;
 }
-*/
+
+int StartingWithVowelCount(string[] array)
+{
+    int count = 0;
+    for(int i = 0; i < array.Length; i++)
+    {
+        char l = array[i].ToLower()[0];
+        if(l == 'a' || l == 'e' || l == 'i' || l == 'o' || l == 'u' || l == 'y') count++;
+    }
+    return count;
+}
+
+Console.Write("Input number of words: ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+string[] words = CreateStringArray(size);
+
+Console.WriteLine($"{StartingWithVowelCount(words)} words are starting with a vowel letter in the array.");
+
 
 //Задача №2
 //Задайте массив строк. Напишите программу, которая генерирует новый массив,
